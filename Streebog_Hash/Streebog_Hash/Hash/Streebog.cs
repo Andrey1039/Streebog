@@ -123,7 +123,7 @@ namespace Streebog_Hash.Hash
         {
             byte[] res = new byte[64];
             
-            byte[] tmp = ((new BigInteger(a) + new BigInteger(b)) % BigInteger.Pow(2, 512)).ToByteArray();
+            byte[] tmp = ((new BigInteger(a) + new BigInteger(b)) % BigInteger.Pow(2, 511)).ToByteArray();
             Array.Copy(tmp, 0, res, 0, tmp.Length);
 
             return res;
